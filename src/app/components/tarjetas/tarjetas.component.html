@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 m-5 animated fadeIn">
+    <div (click)="verArtista(item)" *ngFor="let item of items" class="col-md-4 puntero">
+      <div class="card profile-card-1">
+        <img [src]="item.images | noimage" alt="profile-sample1" class="background"/>
+        <img [src]="item.images | noimage" alt="profile-image" class="profile"/>
+        <div class="card-content">
+          <h2>{{ item.name }}</h2>
+          <div class="d-flex mt-auto w-100 justify-content-center">
+            <span *ngFor="let artista of item.artists" class="badge rounded-pill">
+              {{ artista.name }}
+            </span>
+          </div>
+        </div>
+    </div>
+</div>
